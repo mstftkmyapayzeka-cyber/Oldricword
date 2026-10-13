@@ -61,6 +61,7 @@ pub mod objects;
 pub mod options;
 pub mod panes;
 pub mod paste_picture;
+pub mod pdf_link;
 pub mod previews;
 pub mod print_page;
 pub mod printing;
@@ -147,6 +148,10 @@ pub struct Services {
     /// `xdg-mime`. `None` (web, macOS) hides the button; macOS shows how to do it in Finder
     /// instead. An error means nothing changed.
     pub make_default_app: Option<Box<dyn Fn() -> Result<DefaultApp, String>>>,
+    /// Desktop: open a file in a sibling Craft app (`"pdfcraft"`), for File › Export › Open in
+    /// PdfCraft. `None` (web, tests) leaves the PDF where it was written and says so. An error
+    /// means the app couldn't be started.
+    pub launch_app: Option<Box<dyn Fn(&str, &str) -> Result<(), String>>>,
 }
 
 /// What [`Services::make_default_app`] did.
@@ -407,6 +412,8 @@ pub struct WordApp {
     pub autosave: bool,
     pub word_count: (u64, usize),
     last_autosave: f64,
+    /// The live update of the PDF linked to the document ([`pdf_link`]).
+    pub(crate) pdf_sync: pdf_link::PdfSync,
     /// The tab shown before the Equation tab came up (restored when editing ends).
     pub(crate) equation_prev_tab: Option<String>,
     /// SmartArt Text Pane: the item last focused (Promote, Demote and Add Shape act on it) and
@@ -501,6 +508,7 @@ impl WordApp {
             autosave: true,
             word_count: (0, 0),
             last_autosave: 0.0,
+            pdf_sync: Default::default(),
             equation_prev_tab: None,
             smart_art_item: None,
             smart_art_typing: None,
@@ -912,6 +920,9 @@ impl WordApp {
         }
         if req.get("close").is_some() {
             self.quit_requested = true;
+        }
+        if req.get("launch").is_some() {
+            pdf_link::launch(self, req);
         }
     }
 
@@ -1369,6 +1380,7 @@ impl WordApp {
         self.drain_inbox();
         self.watch_fonts(ctx);
         self.autosave_tick(now_ms());
+        pdf_link::poll(self, ctx);
         if self.autosaves() && self.session.dirty {
             ctx.request_repaint_after(std::time::Duration::from_millis(1000));
         }

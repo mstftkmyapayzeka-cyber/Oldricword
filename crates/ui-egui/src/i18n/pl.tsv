@@ -2468,3 +2468,12 @@ preview	Title	Tytuł
 	Typing	Pisanie
 	Search	Wyszukaj
 	Title Bar	Pasek tytułu
+	Open in PdfCraft	Otwórz w PdfCraft
+	Keep PDF in Sync	Synchronizuj PDF
+	Update Linked PDF	Aktualizuj połączony PDF
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Otwiera dokument jako PDF w PdfCraft. Gdy opcja „Synchronizuj PDF” jest włączona, PDF jest zapisywany ponownie po każdej zmianie, a PdfCraft go wyświetla.
+	Linked PDF: {path}	Połączony PDF: {path}
+	The PDF is ready: {path}	PDF jest gotowy: {path}
+	Opened in PdfCraft: {path}	Otwarto w PdfCraft: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	Nie można uruchomić PdfCraft ({error}). PDF znajduje się tutaj: {path}
+	The linked PDF wasn't updated: {error}	Połączony PDF nie został zaktualizowany: {error}

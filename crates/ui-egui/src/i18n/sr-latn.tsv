@@ -2085,3 +2085,12 @@
 	Start-up	Pokretanje
 	Show the Start screen when WordCraft starts	Prikaži početni ekran pri pokretanju programa WordCraft
 	On: WordCraft opens on File › Home, with a blank document, the templates and your recent documents. Off: it opens a blank document.	Uključeno: WordCraft se otvara na Fajl › Početak, sa praznim dokumentom, šablonima i nedavnim dokumentima. Isključeno: otvara prazan dokument.
+	Open in PdfCraft	Otvori u PdfCraft-u
+	Keep PDF in Sync	Održavaj PDF usklađenim
+	Update Linked PDF	Ažuriraj povezani PDF
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Otvara dokument kao PDF u PdfCraft-u. Dok je „Održavaj PDF usklađenim“ uključeno, PDF se ponovo upisuje posle svake izmene i PdfCraft ga prikazuje.
+	Linked PDF: {path}	Povezani PDF: {path}
+	The PDF is ready: {path}	PDF je spreman: {path}
+	Opened in PdfCraft: {path}	Otvoreno u PdfCraft-u: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	PdfCraft nije mogao da se pokrene ({error}). PDF je ovde: {path}
+	The linked PDF wasn't updated: {error}	Povezani PDF nije ažuriran: {error}

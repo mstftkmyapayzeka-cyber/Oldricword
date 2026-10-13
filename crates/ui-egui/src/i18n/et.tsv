@@ -2109,3 +2109,12 @@
 	Start-up	Käivitamine
 	Show the Start screen when WordCraft starts	Näita WordCrafti käivitamisel avakuva
 	On: WordCraft opens on File › Home, with a blank document, the templates and your recent documents. Off: it opens a blank document.	Sees: WordCraft avaneb vaates Fail › Avaleht, kus on tühi dokument, mallid ja hiljutised dokumendid. Väljas: avaneb tühi dokument.
+	Open in PdfCraft	Ava PdfCraftis
+	Keep PDF in Sync	Hoia PDF sünkroonis
+	Update Linked PDF	Värskenda lingitud PDF-i
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Avab dokumendi PDF-ina PdfCraftis. Kuni „Hoia PDF sünkroonis“ on sees, kirjutatakse PDF pärast iga muudatust uuesti ja PdfCraft näitab seda.
+	Linked PDF: {path}	Lingitud PDF: {path}
+	The PDF is ready: {path}	PDF on valmis: {path}
+	Opened in PdfCraft: {path}	Avatud PdfCraftis: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	PdfCrafti ei saanud käivitada ({error}). PDF asub siin: {path}
+	The linked PDF wasn't updated: {error}	Lingitud PDF-i ei värskendatud: {error}

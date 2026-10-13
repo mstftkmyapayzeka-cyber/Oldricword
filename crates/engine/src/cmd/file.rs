@@ -204,11 +204,16 @@ fn save(s: &mut Session, v: &Value) -> CmdResult {
     crate::io::save_path_with(&path, &s.doc, password, &export_options(s, v)).map_err(CmdError::Failed)?;
     let encrypted = password.is_some() && crate::io::can_encrypt(&path.to_string_lossy());
     let ext = path.extension().and_then(|e| e.to_str()).unwrap_or("").to_ascii_lowercase();
+    let mut r = json!({"saved": true, "path": path.to_string_lossy(), "encrypted": encrypted});
     if ["docx", "docm", "dotx", "dotm", "odt", "rtf", "json", "xml"].contains(&ext.as_str()) {
         s.path = Some(path.clone());
         s.dirty = false;
+        // The linked PDF follows every save of the document (`cmd::suite`).
+        if let (Some(pdf), Some(o)) = (super::suite::after_save(s), r.as_object_mut()) {
+            o.insert("pdf".into(), pdf);
+        }
     }
-    Ok(json!({"saved": true, "path": path.to_string_lossy(), "encrypted": encrypted}))
+    Ok(r)
 }
 
 fn save_as(s: &mut Session, v: &Value) -> CmdResult {
