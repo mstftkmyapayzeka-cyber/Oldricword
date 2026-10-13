@@ -2083,3 +2083,12 @@
 	Table Properties…	Propriétés du tableau…
 	Search	Rechercher
 	Title Bar	Barre de titre
+	Open in PdfCraft	Ouvrir dans PdfCraft
+	Keep PDF in Sync	Garder le PDF synchronisé
+	Update Linked PDF	Mettre à jour le PDF lié
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Ouvre le document en PDF dans PdfCraft. Tant que « Garder le PDF synchronisé » est activé, le PDF est réécrit après chaque modification et PdfCraft l’affiche.
+	Linked PDF: {path}	PDF lié : {path}
+	The PDF is ready: {path}	Le PDF est prêt : {path}
+	Opened in PdfCraft: {path}	Ouvert dans PdfCraft : {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	Impossible de démarrer PdfCraft ({error}). Le PDF se trouve ici : {path}
+	The linked PDF wasn't updated: {error}	Le PDF lié n’a pas été mis à jour : {error}

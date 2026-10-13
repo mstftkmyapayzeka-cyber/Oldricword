@@ -2473,3 +2473,12 @@ preview	Title	Örnek
 	Level 7	Düzey 7
 	Level 8	Düzey 8
 	Level 9	Düzey 9
+	Open in PdfCraft	PdfCraft'ta Aç
+	Keep PDF in Sync	PDF'yi Eşitlenmiş Tut
+	Update Linked PDF	Bağlı PDF'yi Güncelle
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Belgeyi PdfCraft'ta PDF olarak açın. PDF'yi Eşitlenmiş Tut açıkken PDF her değişiklikten sonra yeniden yazılır ve PdfCraft onu gösterir.
+	Linked PDF: {path}	Bağlı PDF: {path}
+	The PDF is ready: {path}	PDF hazır: {path}
+	Opened in PdfCraft: {path}	PdfCraft'ta açıldı: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	PdfCraft başlatılamadı ({error}). PDF şurada: {path}
+	The linked PDF wasn't updated: {error}	Bağlı PDF güncellenmedi: {error}

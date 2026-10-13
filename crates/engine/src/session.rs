@@ -327,6 +327,9 @@ pub struct Session {
     /// Formatting picked with a collapsed caret, applied to the next typed text.
     pub pending: Option<CharProps>,
     pub path: Option<std::path::PathBuf>,
+    /// The PDF kept in step with the document (`file.openInPdfCraft`, `file.pdfSync`): written
+    /// again on every save. Host wiring like `path`, not part of the document.
+    pub pdf_link: Option<std::path::PathBuf>,
     pub dirty: bool,
     /// Where the custom dictionary is kept on disk, if the host wired one up. Only the desktop
     /// app does: headless sessions (MCP, `wordcraft-cli run`), tests and the web build leave
@@ -569,6 +572,7 @@ impl Session {
             view: ViewState::default(),
             pending: None,
             path: None,
+            pdf_link: None,
             user_dict_path: None,
             dirty: false,
             clipboard: None,
@@ -960,6 +964,9 @@ impl Session {
         self.doc = doc;
         self.doc.ensure_nonempty();
         self.password = None;
+        // The linked PDF belongs to the document being replaced: saving this one must not
+        // overwrite it.
+        self.pdf_link = None;
         self.sel = Selection::caret(self.doc.start_of(StoryRef::Body));
         self.pending = None;
         self.also_selected.clear();
@@ -998,6 +1005,8 @@ impl Session {
             view: _,
             pending: _,
             path: _,
+            // The linked PDF, like the file path: not an edit to the document.
+            pdf_link: _,
             // The custom dictionary file, like the file path: host wiring, not an edit.
             user_dict_path: _,
             dirty,

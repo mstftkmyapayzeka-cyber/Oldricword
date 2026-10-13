@@ -156,6 +156,9 @@ fn saves_and_exports_go_only_into_the_write_root() {
     for (command, params) in [
         ("file.saveAs", json!({"path": s(&base.join("outside/x.docx"))})),
         ("file.exportPdf", json!({"path": s(&base.join("outside/x.pdf"))})),
+        // The PdfCraft link writes a PDF too (`cmd::suite`).
+        ("file.openInPdfCraft", json!({"path": s(&base.join("outside/linked.pdf"))})),
+        ("file.pdfSync", json!({"value": true, "path": s(&base.join("outside/synced.pdf"))})),
         ("file.printPdf", json!({"path": s(&base.join("outside/printed.pdf"))})),
         ("file.printPdf", json!({"path": format!("{}{sep}..{sep}outside{sep}up", s(&base.join("out")))})),
         ("file.exportPng", json!({"path": s(&base.join("outside/x.png"))})),

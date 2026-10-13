@@ -2464,3 +2464,12 @@
 	Table Properties…	Свойства на таблица…
 	Search	Търсене
 	Title Bar	Заглавна лента
+	Open in PdfCraft	Отваряне в PdfCraft
+	Keep PDF in Sync	PDF файлът да е синхронизиран
+	Update Linked PDF	Обновяване на свързания PDF
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Отваря документа като PDF в PdfCraft. Докато „PDF файлът да е синхронизиран“ е включено, PDF файлът се записва отново след всяка промяна и PdfCraft го показва.
+	Linked PDF: {path}	Свързан PDF: {path}
+	The PDF is ready: {path}	PDF файлът е готов: {path}
+	Opened in PdfCraft: {path}	Отворено в PdfCraft: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	PdfCraft не можа да се стартира ({error}). PDF файлът е в {path}
+	The linked PDF wasn't updated: {error}	Свързаният PDF не беше обновен: {error}

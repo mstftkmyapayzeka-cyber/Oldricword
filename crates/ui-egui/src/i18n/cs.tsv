@@ -2080,3 +2080,12 @@
 	Automatic ({region})	Automaticky ({region})
 	Search	Hledat
 	Title Bar	Záhlaví okna
+	Open in PdfCraft	Otevřít v PdfCraft
+	Keep PDF in Sync	Udržovat PDF synchronizované
+	Update Linked PDF	Aktualizovat propojené PDF
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Otevře dokument jako PDF v PdfCraft. Dokud je zapnuto „Udržovat PDF synchronizované“, PDF se po každé změně znovu zapíše a PdfCraft ho zobrazí.
+	Linked PDF: {path}	Propojené PDF: {path}
+	The PDF is ready: {path}	PDF je připraveno: {path}
+	Opened in PdfCraft: {path}	Otevřeno v PdfCraft: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	PdfCraft se nepodařilo spustit ({error}). PDF je zde: {path}
+	The linked PDF wasn't updated: {error}	Propojené PDF nebylo aktualizováno: {error}

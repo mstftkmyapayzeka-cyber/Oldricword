@@ -2473,3 +2473,12 @@
 	Table Properties…	Táblázat tulajdonságai…
 	Search	Keresés
 	Title Bar	Címsor
+	Open in PdfCraft	Megnyitás a PdfCraftban
+	Keep PDF in Sync	PDF szinkronban tartása
+	Update Linked PDF	Csatolt PDF frissítése
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	A dokumentumot PDF-ként nyitja meg a PdfCraftban. Amíg a „PDF szinkronban tartása” be van kapcsolva, a PDF minden módosítás után újra íródik, és a PdfCraft megjeleníti.
+	Linked PDF: {path}	Csatolt PDF: {path}
+	The PDF is ready: {path}	A PDF elkészült: {path}
+	Opened in PdfCraft: {path}	Megnyitva a PdfCraftban: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	A PdfCraft nem indítható el ({error}). A PDF itt található: {path}
+	The linked PDF wasn't updated: {error}	A csatolt PDF nem frissült: {error}

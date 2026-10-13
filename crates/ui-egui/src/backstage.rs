@@ -387,6 +387,33 @@ fn export_page(app: &mut WordApp, ui: &mut Ui) {
     ui.label(tl!("Save a copy in another format. Printing goes through a PDF you can print from any viewer."));
     ui.add_space(12.0);
     crate::print_page::export_formats(app, ui);
+    ui.add_space(16.0);
+    pdfcraft_section(app, ui);
+}
+
+/// File › Export: hand the document to PdfCraft as a PDF that follows every change (`cmd::suite`).
+fn pdfcraft_section(app: &mut WordApp, ui: &mut Ui) {
+    heading(ui, "PdfCraft");
+    ui.label(tl!(
+        "Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it."
+    ));
+    ui.add_space(8.0);
+    let open = egui::Button::new(egui::RichText::new(tl!("Open in PdfCraft")).font(medium(13.5))).min_size(vec2(320.0, 34.0));
+    if ui.add(open).clicked()
+        && let Err(e) = app.run("file.openInPdfCraft", json!({}))
+    {
+        app.status(e);
+    }
+    ui.add_space(4.0);
+    let mut sync = app.session.pdf_link.is_some();
+    if ui.checkbox(&mut sync, tl!("Keep PDF in Sync")).changed()
+        && let Err(e) = app.run("file.pdfSync", json!({"value": sync}))
+    {
+        app.status(e);
+    }
+    if let Some(path) = app.session.pdf_link.as_ref().map(|p| p.to_string_lossy().into_owned()) {
+        ui.label(egui::RichText::new(crate::i18n::fmt(tl!("Linked PDF: {path}"), &[("path", &path)])).font(regular(12.5)));
+    }
 }
 
 #[cfg(test)]

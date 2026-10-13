@@ -2474,3 +2474,12 @@ preview	Title	Пример
 	Level 7	Уровень 7
 	Level 8	Уровень 8
 	Level 9	Уровень 9
+	Open in PdfCraft	Открыть в PdfCraft
+	Keep PDF in Sync	Синхронизировать PDF
+	Update Linked PDF	Обновить связанный PDF
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Открывает документ как PDF в PdfCraft. Пока включено «Синхронизировать PDF», PDF перезаписывается после каждого изменения, и PdfCraft его показывает.
+	Linked PDF: {path}	Связанный PDF: {path}
+	The PDF is ready: {path}	PDF готов: {path}
+	Opened in PdfCraft: {path}	Открыто в PdfCraft: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	Не удалось запустить PdfCraft ({error}). PDF находится здесь: {path}
+	The linked PDF wasn't updated: {error}	Связанный PDF не обновлён: {error}

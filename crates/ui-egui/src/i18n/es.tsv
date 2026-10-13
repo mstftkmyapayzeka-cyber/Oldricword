@@ -2441,3 +2441,12 @@ preview	Title	Título
 	Start-up	Inicio de la aplicación
 	Show the Start screen when WordCraft starts	Mostrar la pantalla de inicio al abrir WordCraft
 	On: WordCraft opens on File › Home, with a blank document, the templates and your recent documents. Off: it opens a blank document.	Activado: WordCraft se abre en Archivo › Inicio, con un documento en blanco, las plantillas y tus documentos recientes. Desactivado: abre un documento en blanco.
+	Open in PdfCraft	Abrir en PdfCraft
+	Keep PDF in Sync	Mantener el PDF sincronizado
+	Update Linked PDF	Actualizar el PDF vinculado
+	Open the document as a PDF in PdfCraft. While Keep PDF in Sync is on, the PDF is written again after every change and PdfCraft shows it.	Abre el documento como PDF en PdfCraft. Mientras «Mantener el PDF sincronizado» esté activado, el PDF se vuelve a escribir tras cada cambio y PdfCraft lo muestra.
+	Linked PDF: {path}	PDF vinculado: {path}
+	The PDF is ready: {path}	El PDF está listo: {path}
+	Opened in PdfCraft: {path}	Abierto en PdfCraft: {path}
+	PdfCraft couldn't be started ({error}). The PDF is at {path}	No se pudo iniciar PdfCraft ({error}). El PDF está en {path}
+	The linked PDF wasn't updated: {error}	El PDF vinculado no se actualizó: {error}

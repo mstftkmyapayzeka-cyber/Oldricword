@@ -21,6 +21,7 @@ mod graphics;
 mod logging;
 mod print;
 mod region;
+mod suite;
 
 use wordcraft_engine::Session;
 use wordcraft_ui_egui::{
@@ -214,6 +215,7 @@ fn services(file_dialog: file_dialogs::Hook, ctx: &egui::Context) -> Services {
         clipboard_html: Some(Box::new(clipboard::html)),
         clipboard_rtf: Some(Box::new(clipboard::rtf)),
         clipboard_formats: Some(Box::new(clipboard::formats)),
+        launch_app: Some(suite::hook()),
         ..Default::default()
     }
 }
